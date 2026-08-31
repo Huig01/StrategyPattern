@@ -1,5 +1,4 @@
 ﻿using StrategyPattern.Ducks;
-using StrategyPattern.Interfaces.FlyBehavior;
 
 namespace StrategyPattern
 {
@@ -10,6 +9,7 @@ namespace StrategyPattern
             Duck mallardDuck = new MallardDuck();
             mallardDuck.PerformQuack();
             mallardDuck.PerformFly();
+            mallardDuck.PerformSwim();
             Duck redheadDuck = new RedheadDuck();
             Duck decoyDuck = new DecoyDuck();
             //decoyDuck.PerformQuack();
@@ -17,6 +17,8 @@ namespace StrategyPattern
             Duck rubberDuck = new RubberDuck();
             //rubberDuck.PerformQuack();
             //rubberDuck.PerformFly();
+            Duck robotDuck = new RobotDuck();
+            robotDuck.PerformSwim();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StrategyPattern.Interfaces.FlyBehavior;
 using StrategyPattern.Interfaces.QuackBehavior;
+using StrategyPattern.Interfaces.Swimbehavior;
 
 namespace StrategyPattern.Ducks
 {
@@ -14,6 +15,7 @@ namespace StrategyPattern.Ducks
         { 
             quackBehavior = new Quack();
             flyBehavior = new FlyWithWings();
+            swimBehavior = new Swim();
         }
         public override void Display()
         {
