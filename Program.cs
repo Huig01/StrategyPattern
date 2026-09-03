@@ -1,4 +1,6 @@
-﻿using StrategyPattern.Ducks;
+﻿using System.Security.Cryptography.X509Certificates;
+using StrategyPattern.Ducks;
+using StrategyPattern.Interfaces.FlyBehavior;
 
 namespace StrategyPattern
 {
@@ -7,9 +9,9 @@ namespace StrategyPattern
         static void Main(string[] args)
         {
             Duck mallardDuck = new MallardDuck();
-            mallardDuck.PerformQuack();
-            mallardDuck.PerformFly();
-            mallardDuck.PerformSwim();
+            //mallardDuck.PerformQuack();
+            //mallardDuck.PerformFly();
+            //mallardDuck.PerformSwim();
             Duck redheadDuck = new RedheadDuck();
             Duck decoyDuck = new DecoyDuck();
             //decoyDuck.PerformQuack();
@@ -18,7 +20,12 @@ namespace StrategyPattern
             //rubberDuck.PerformQuack();
             //rubberDuck.PerformFly();
             Duck robotDuck = new RobotDuck();
-            robotDuck.PerformSwim();
+            //robotDuck.Display();
+            //robotDuck.PerformSwim();
+            Duck model = new ModelDuck();
+            model.PerformFly();
+            model.SetFlyBehavior(new FlyRocketPowered());
+            model.PerformFly();           
         }
     }
 }
